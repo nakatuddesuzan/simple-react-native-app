@@ -1,11 +1,16 @@
-import React, { Component } from 'react';
-import { Text } from "react-native";
+import React, { Component } from "react";
+import { FlatList, Text } from "react-native";
 
 class EventList extends Component {
-    state = {  }
-    render() { 
-        return ( <Text>Hello</Text> );
-    }
+  s;
+  render() {
+    return (
+      <FlatList
+        data={[{ name: "a" }, { name: "b" }]}
+        renderItem={({ item }) => <Text>{item.name}</Text>}
+      />
+    );
+  }
 }
- 
+
 export default EventList;
